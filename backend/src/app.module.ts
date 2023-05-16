@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 // import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { DonationsModule } from './donations/donations.module';
+import { GraphQLDateTime } from 'graphql-iso-date';
 
 @Module({
   // 1
@@ -10,10 +11,9 @@ import { DonationsModule } from './donations/donations.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       playground: false,
-      // habilida o plugin code sandbox
       // plugins: [ApolloServerPluginLandingPageLocalDefault()],
-      // mapeia todos os arquivos nessa extensão, a vantagem seria para o caso de ter muitos resolvers que por sua vez exigem o schema
       typePaths: ['./**/*.graphql'],
+      resolvers: { DateTime: GraphQLDateTime },
     }),
     DonationsModule,
   ],
