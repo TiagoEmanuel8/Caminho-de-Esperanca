@@ -2,6 +2,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 // import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
+import { DonationsModule } from './donations/donations.module';
 
 @Module({
   // 1
@@ -14,6 +15,7 @@ import { GraphQLModule } from '@nestjs/graphql';
       // mapeia todos os arquivos nessa extensão, a vantagem seria para o caso de ter muitos resolvers que por sua vez exigem o schema
       typePaths: ['./**/*.graphql'],
     }),
+    DonationsModule,
   ],
   controllers: [],
   providers: [],
