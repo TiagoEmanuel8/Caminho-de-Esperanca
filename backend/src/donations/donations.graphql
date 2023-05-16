@@ -19,6 +19,4 @@ type Query {
 
 type Mutation {
   createDonation(createDonationInput: CreateDonationInput!): Donation!
-  updateDonation(updateDonationInput: UpdateDonationInput!): Donation!
-  removeDonation(id: Int!): Donation
 }
