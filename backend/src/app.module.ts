@@ -3,7 +3,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 // import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { DonationsModule } from './donations/donations.module';
-import { GraphQLDateTime } from 'graphql-iso-date';
+import { GraphQLDateTime } from 'graphql-scalars';
 
 @Module({
   // 1
