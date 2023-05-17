@@ -1,11 +1,13 @@
 -- CreateTable
 CREATE TABLE "Donation" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "count" INTEGER NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "displayName" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "mobile" TEXT,
     "message" TEXT,
-    "team" TEXT
+    "team" TEXT,
+
+    CONSTRAINT "Donation_pkey" PRIMARY KEY ("id")
 );
