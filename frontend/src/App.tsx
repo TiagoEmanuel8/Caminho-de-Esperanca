@@ -47,6 +47,7 @@ export const App = () => {
     { query: TotalUpdatedQuery },
     handleSubscription
   );
+  
   const [{ data, fetching, error }] = useQuery({
     query: TotalDonationsQuery,
   });
