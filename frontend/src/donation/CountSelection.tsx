@@ -72,7 +72,6 @@ export const CountSelection = ({ initialCount, next }: Props) => {
       <hr />
 
       <Button
-        isFullWidth
         colorScheme="orange"
         size="lg"
         borderRadius="full"
