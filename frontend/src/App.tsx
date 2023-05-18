@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
+import { Counter } from './donation/Counter';
 
 const theme = extendTheme({
   fonts: {
@@ -33,6 +34,11 @@ export const App = () => (
           <Text>
             Muitas pessoas estão necessitadas nesse momento, dê uma esperança a elas.
           </Text>
+
+          <Heading as="h2" size="4xl">
+            <Counter from={0} to={123456789} />
+          </Heading>
+
         </VStack>
       </Grid>
     </Box>
