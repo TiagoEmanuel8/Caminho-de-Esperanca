@@ -26,7 +26,7 @@ export const CountSelection = ({ initialCount, next }: Props) => {
 
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: 'pounds',
-    value: pounds,
+    value: pounds.toString(),
     onChange: (nextValue) => {
       setCustomAmount('');
       setPounds(parseInt(nextValue));
