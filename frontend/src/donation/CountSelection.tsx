@@ -16,7 +16,7 @@ interface Props {
   next: (values: any) => void;
 }
 
-const options = [5, 20, 50, 100];
+const options = [5, 10, 20, 50];
 
 export const CountSelection = ({ initialCount, next }: Props) => {
   const [pounds, setPounds] = useState(initialCount);
@@ -42,17 +42,17 @@ export const CountSelection = ({ initialCount, next }: Props) => {
   return (
     <VStack spacing={4} align="stretch">
       <Heading as="h3" size="md">
-        JOIN #TEAMSEAS
+        Ajude o projeto Caminhos de Esperança
       </Heading>
       <Text fontSize="md" fontWeight="bold">
-        $1 removes a pound of trash
+        Cada cesta básica irá fazer a diferença para uma família
       </Text>
       <SimpleGrid mt={5} columns={2} spacing={2} {...group}>
         {options.map((value) => {
           const radio = getRadioProps({ value, enterKeyHint: '' });
           return (
             <RadioCard key={value} {...radio}>
-              {value} pounds
+              {value} Cestas Básicas
             </RadioCard>
           );
         })}
@@ -66,7 +66,7 @@ export const CountSelection = ({ initialCount, next }: Props) => {
         }}
         value={customAmount}
       >
-        <NumberInputField placeholder="Other amount" />
+        <NumberInputField placeholder="Outra quantidade" />
       </NumberInput>
 
       <hr />
@@ -77,7 +77,7 @@ export const CountSelection = ({ initialCount, next }: Props) => {
         borderRadius="full"
         onClick={nextStep}
       >
-        Next
+        Próximo
       </Button>
     </VStack>
   );

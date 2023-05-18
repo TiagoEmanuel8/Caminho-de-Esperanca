@@ -42,32 +42,32 @@ export const DonationDetails = ({ next, previous }: Props) => {
         <Form>
           <VStack spacing={4} align="stretch">
             <Heading as="h3" size="md">
-              Details
+              Preencha os dados abaixo
             </Heading>
             <InputField
-              label="Display Name"
+              label="Nome"
               name="displayName"
-              placeholder="Display Name"
+              placeholder="Nome"
             />
 
             <InputField
-              label="Email Address"
+              label="Email"
               name="email"
               placeholder="Email"
             />
 
             <InputField
-              label="Mobile Phone"
+              label="Número Telefone"
               name="mobile"
-              placeholder="Mobile Phone"
+              placeholder="Número Telefone"
             />
 
-            <InputField label="Team" name="team" placeholder="Team name" />
+            <InputField label="Empresa" name="team" placeholder="Em caso de empresa preencha aqui" />
 
             <TextareaField
-              label="Message"
+              label="Mensagem"
               name="message"
-              placeholder="My #TeamSeas message is..."
+              placeholder="Digite aqui sua mensagem de apoio"
             />
 
             <hr />
@@ -79,7 +79,7 @@ export const DonationDetails = ({ next, previous }: Props) => {
                 borderRadius="full"
                 type="submit"
               >
-                Submit
+                Doar
               </Button>
               <Button
                 size="lg"
@@ -89,7 +89,7 @@ export const DonationDetails = ({ next, previous }: Props) => {
                 color="gray.700"
                 onClick={previous}
               >
-                Previous
+                Voltar
               </Button>
             </VStack>
           </VStack>

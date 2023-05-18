@@ -1,8 +1,12 @@
+import * as React from "react"
 import '@fontsource/montserrat/700.css';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/300.css';
-
-import * as React from "react"
+import { useQuery, useSubscription } from 'urql';
+import { Logo } from "./Logo";
+import { Counter } from './donation/Counter';
+import { Leaderboard } from './leaderboard/Leaderboard';
+import { DonationWizard } from './donation/DonationWizard';
 import {
   ChakraProvider,
   Box,
@@ -11,12 +15,7 @@ import {
   Grid,
   Heading,
   extendTheme
-} from "@chakra-ui/react"
-import { useQuery, useSubscription } from 'urql';
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
-import { Counter } from './donation/Counter';
-import { Leaderboard } from './leaderboard/Leaderboard';
+} from "@chakra-ui/react";
 
 const TotalDonationsQuery = `
   query Query {
@@ -36,7 +35,7 @@ const theme = extendTheme({
   fonts: {
     heading: 'Montserrat',
     body: 'Montserrat',
-  },
+  }
 });
 
 const handleSubscription = (previous: any, newTotal: any) => {
@@ -59,18 +58,21 @@ export const App = () => {
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3} bg="gray.50">
-          <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
             <Logo h="32vmin" pointerEvents="none" />
-            <Heading as="h1" size="xl">Ajude você também</Heading>
+            <Heading as="h1" size="xl">Projeto Caminhos de Esperança</Heading>
             <Text>
-              Muitas pessoas estão necessitadas nesse momento, dê uma esperança a elas.
+              Até o momento arracademos
             </Text>
 
             <Heading as="h2" size="4xl">
               <Counter from={0} to={res.data || data.totalDonations} />
             </Heading>
-            
+
+            <Text>
+              Cestas Básicas
+            </Text>
+            <DonationWizard />
             <Leaderboard />
 
           </VStack>

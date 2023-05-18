@@ -49,7 +49,7 @@ export const LeaderboardItem = ({ donation }: Props) => {
                 px={3}
                 as="div"
               >
-                {donation.count.toLocaleString()} pounds
+                {donation.count.toLocaleString()} Cestas Básicas
               </Badge>
             </div>
             <Text fontSize="xs">{formatDate(donation.createdAt)}</Text>

@@ -53,10 +53,9 @@ export const DonationWizard = (props: Props) => {
   return (
     <Box boxShadow="xl" p={8} bg="white" borderRadius="xl" minW="sm">
        {showConfirmation ? (
-        <div>
-          Thank you for your donation of $
-          {donationResult?.data.createDonation?.count}!!
-        </div>
+        <span>
+          Obrigado pela sua doação de <b>{donationResult?.data.createDonation?.count} Cestas Básicas</b>
+        </span>
       ) : (
         pages[step]
       )}
