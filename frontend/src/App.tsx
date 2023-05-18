@@ -47,7 +47,7 @@ export const App = () => {
     { query: TotalUpdatedQuery },
     handleSubscription
   );
-  
+
   const [{ data, fetching, error }] = useQuery({
     query: TotalDonationsQuery,
   });
@@ -73,7 +73,9 @@ export const App = () => {
             <Text>
               Cestas Básicas
             </Text>
+
             <DonationWizard />
+
             <Leaderboard />
 
           </VStack>
