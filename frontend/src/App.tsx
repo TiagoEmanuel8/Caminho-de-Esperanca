@@ -16,6 +16,7 @@ import { useQuery, useSubscription } from 'urql';
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
 import { Counter } from './donation/Counter';
+import { Leaderboard } from './leaderboard/Leaderboard';
 
 const TotalDonationsQuery = `
   query Query {
@@ -69,6 +70,8 @@ export const App = () => {
             <Heading as="h2" size="4xl">
               <Counter from={0} to={res.data || data.totalDonations} />
             </Heading>
+            
+            <Leaderboard />
 
           </VStack>
         </Grid>
