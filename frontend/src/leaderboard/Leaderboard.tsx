@@ -44,13 +44,13 @@ export const Leaderboard = (props: Props) => {
     <Box w="100%">
       <VStack spacing={4}>
         <Heading as="h1" size="2xl">
-          LEADERBOARD
+          DOAÇÕES
         </Heading>
 
         <RadioGroup onChange={setOrderByField} value={field}>
           <Stack direction="row">
-            <Radio value="createdAt">Most Recent</Radio>
-            <Radio value="count">Most Pounds</Radio>
+            <Radio value="createdAt">Doações Recentes</Radio>
+            <Radio value="count">Maiores Doações</Radio>
           </Stack>
         </RadioGroup>
 
