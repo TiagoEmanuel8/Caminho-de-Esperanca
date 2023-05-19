@@ -1,5 +1,4 @@
-import { Button } from '@chakra-ui/button';
-import { Box, VStack } from '@chakra-ui/layout';
+import { Box } from '@chakra-ui/layout';
 import React, { useState } from 'react';
 import { useMutation } from 'urql';
 import { CountSelection } from './CountSelection';
