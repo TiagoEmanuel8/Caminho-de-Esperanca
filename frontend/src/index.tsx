@@ -12,12 +12,15 @@ import {
 } from 'urql';
 import { createClient as createWSClient } from 'graphql-ws';
 
+const HOST = process.env.REACT_APP_API_HOST || "localhost:3001";
+const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || "http";
+
 const wsClient = createWSClient({
-  url: 'ws://localhost:3001/graphql',
+  url: `ws://${HOST}/graphql`,
 });
 
 const client = createClient({
-  url: 'http://localhost:3001/graphql',
+  url: `${PROTOCOL}://${HOST}/graphql`,
   exchanges: [
     ...defaultExchanges,
     subscriptionExchange({
