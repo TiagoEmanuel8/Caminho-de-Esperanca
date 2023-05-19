@@ -35,7 +35,8 @@ Uma aplicação fullstack para arrecadar cestas básicas para um projeto social 
 ---
 
 # Deploy
-É o próximo passo do projeto, estou pesquisando as melhores soluções de deploy grátis, no momento estou entre usar os serviços da railway ou os planos 'trial' da digital ocean ou aws.
+
+Acesse https://caminho-de-esperanca.vercel.app/ e veja a aplicação em tempo real em sua máquina
 
 ---
 
